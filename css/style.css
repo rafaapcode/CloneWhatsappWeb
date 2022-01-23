@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+};
+
+ul{
+    list-style: none;
+}
+
+.container{
+    height: 100vh;
+    position: relative;
+}
+
+/* Side bar */
+
+.sidebar{
+    width: 410px;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+/* Barra de Ferramentas */
+
+.barra-ferramentas{
+    width: 100%;
+    height: 60px;
+    background-color: #EEE;
+}
+
+.foto-usuário{
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    background-color: #CCC;
+}
+
+.iconesaux-toolbar-container{
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    padding-right: 20px;
+}
+
+.iconesaux-toolbar-container i {
+    color: #80868A;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* Container de Notificação */
+
+.notificacao{
+    width: 100%;
+    height: 90px;
+    padding-top: 23px;
+    padding-left: 80px;
+    background-color: #9DE1FE;
+    color: #384C56;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.fas.fa-bell-slash{
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #9DE1FE;
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+
+.notificacao p{
+    margin: 0;
+}
+
+.notificacao .receber-notificacao{
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.ativar-notificacao{
+    font-size: 13px;
+}
+
+/* Busca */
+
+.procurar-container{
+    height: 50px;
+    width: 100%;
+    padding-left: 7.5px;
+    padding-top: 7.5px;
+    background-color: #F8F8F8;
+    position: relative;
+    color: #BDC1C3;
+    box-sizing: border-box;
+}
+
+#procurar-contato{
+    position: absolute;
+    left: 30px;
+    top: 18px;
+    font-size: 14px;
+}
+
+#procurar{
+    border: none;
+    height: 35px;
+    width: 385px;
+    padding-left: 60px;
+    border-radius: 17.5px;
+    background-color: #FFF;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#procurar::placeholder{
+    color: #BDC1C3;
+}
+
+/* Contatos */
+
+.contato-container{
+    height: auto;
+    background-color: #FFF;
+}
+
+.contato-box{
+    cursor: pointer;
+    height: 72px;
+    background-color: white;
+    border-top: 1px solid #F2F2F2;
+    position: relative;
+    box-sizing: border-box;
+    transition: 0.1s;
+}
+
+.contato-box::last-child{
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.contato-box:hover{
+    background-color: #E9EBEB;
+}
+
+.chat-ativo{
+    background-color: #E9EBEB;
+}
+
+.chat-ativo.contato-box:hover{
+    background-color: #E9EBEB;
+}
+
+.contato-box .foto-usuário{
+    width: 50px;
+}
+
+.usuario-info{
+    margin-left: 80px;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.usuario-info p, .msg-info p{
+    margin: 0;
+}
+
+.usuario-nome{
+    font-size: 16px;
+    color: black;
+    margin-bottom: 12px;
+}
+
+.usuario-msgpreview{
+    font-size: 14px;
+    color: #454545;
+}
+
+.fa-check-double{
+    margin-right: 5px;
+    color: #4FC3F7;
+}
+
+.msg-info{
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    display: inline-block;
+}
+
+.msg-info .msg-time{
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #CCC;
+}
+
+.msg-pendente{
+    background-color: #09D261;
+    color: white;
+    width: 19px;
+    height: 19px;
+    line-height: 19px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    text-align: center;
+    float: right;
+}
+
+/* Chat */
+
+.chat-container{
+    position: absolute;
+    top: 0;
+    left: 410px;
+    width: calc(100% - 410px);
+    height: 100%;
+    background-color: #CCC;
+}
+
+/* Chat navbar */
+
+.chat-navbar{
+    height: 60px;
+    background-color: #EEE;
+    border-left: 1px solid #DDD;
+    padding-left: 75px;
+}
+
+.chat-navbar p{
+    margin: 0;
+}
+
+.contatoinfo-container{
+    display: inline-block;
+}
+
+.contatoinfo-container .usuario-nome{
+    font-size: 16px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.chattool-container {
+    float: right;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    margin-right: 20px; 
+}
+
+.chattool-container li{
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 18px;
+    color: #80868A;
+    cursor: pointer;
+}
+
+/* Mensagens */
+
+.msgs-container{
+    background-color: #E1DAD2;
+    height: calc(100% - 120px);
+    position: relative;
+}
+
+.msgs-container p {
+     margin: 0;
+}
+
+.bg-img{
+    background-image: url("/img/background_whats.png");
+    opacity: 0.06;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+}
+
+.chat-msgs{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 30px 80px;
+    box-sizing: border-box;
+}
+
+.chat-msgs p{
+    display: block;
+    color: #262626;
+    font-size: 14px;
+    padding: 7px;
+    border-radius: 7px;
+    position: relative;
+    width: 200px;
+}
+
+.guest-msg{
+    background: white;
+}
+
+.guest-msg:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 17px solid transparent;
+    border-right: 17px solid white;
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
+
+.usuario-msg{
+    background-color: #DCF8C6;
+    float: right;
+}
+
+.usuario-msg:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 17px solid transparent;
+    border-left: 17px solid #DCF8C6;
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+
+/* Enviar Mensagem */
+.mandar-msg-container{
+    background-color: #EFEFEF;
+    border-left: 1px solid #DDD;
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+}
+
+#chatMsg{
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    background-color: white;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+    width: 815px;
+    outline: none;
+}
+
+.mandar-msg-container i{
+    font-size: 24px;
+    color: #80868A;
+    cursor: pointer;
+    height: 60px;
+    line-height: 60px;
+}
+
+.fa-microphone{
+    float: right;
+}
